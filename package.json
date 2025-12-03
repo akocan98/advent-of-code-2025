@@ -6,7 +6,8 @@
     "lint": "eslint . ",
     "lint:fix": "eslint . --fix ",
     "day-1": "tsx day-1/index.ts",
-    "day-2": "tsx day-2/index.ts"
+    "day-2": "tsx day-2/index.ts",
+    "day-3": "tsx day-3/index.ts"
   },
   "dependencies": {
     "graceful-fs": "^4.2.11"
