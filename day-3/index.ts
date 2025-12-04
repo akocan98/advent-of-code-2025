@@ -14,6 +14,7 @@ let joltageCountPart2 = 0;
 for (const line of input.trim().split('\n')) {
   // Part 1:
   let first = 0;
+
   let second = 0;
 
   for (const [index, char] of line.split('').entries()) {
@@ -35,15 +36,15 @@ for (const line of input.trim().split('\n')) {
   let from = 0;
 
   for (let i = from; i < 12; i++) {
-    const leadingNumberInAvailableSubstring = line
+    const highestNumberInAvailableSubstring = line
       .slice(from, line.length - (11 - i))
       .split('')
       .map(Number)
       .reduce((acc, curr) => (curr > acc ? curr : acc), 0);
 
-    from = line.indexOf(String(leadingNumberInAvailableSubstring), from) + 1;
+    from = line.indexOf(String(highestNumberInAvailableSubstring), from) + 1;
 
-    maxJoltageLine = `${maxJoltageLine}${leadingNumberInAvailableSubstring}`;
+    maxJoltageLine = `${maxJoltageLine}${highestNumberInAvailableSubstring}`;
   }
 
   joltageCountPart2 = joltageCountPart2 + Number(maxJoltageLine);
