@@ -21,3 +21,9 @@ npm run day-2
 ```bash
 npm run day-3
 ```
+
+### Day 4:
+
+```bash
+npm run day-4
+```
