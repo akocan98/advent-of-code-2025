@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-const input = fs.readFileSync('./day-4/input.txt', 'utf8');
+const input = fs.readFileSync(`./day-4/input.txt`, `utf8`);
 
 /**
  * Day 4:
@@ -9,7 +9,7 @@ const input = fs.readFileSync('./day-4/input.txt', 'utf8');
 
 const diagram = [];
 
-for (const line of input.split('\n')) {
+for (const line of input.split(`\n`)) {
   diagram.push(line);
 }
 
@@ -20,7 +20,7 @@ const findAccessibleRolls = ({ flagAsRemoved }: { flagAsRemoved: boolean }) => {
     const line = diagram[i];
 
     for (let j = 0; j < line.length; j++) {
-      if (diagram[i][j] !== '@') {
+      if (diagram[i][j] !== `@`) {
         continue;
       }
 
@@ -33,7 +33,7 @@ const findAccessibleRolls = ({ flagAsRemoved }: { flagAsRemoved: boolean }) => {
             continue;
           }
 
-          if (diagram[ii]?.[jj] === '@') {
+          if (diagram[ii]?.[jj] === `@`) {
             rollCount++;
           }
         }
@@ -45,7 +45,7 @@ const findAccessibleRolls = ({ flagAsRemoved }: { flagAsRemoved: boolean }) => {
         if (flagAsRemoved) {
           // mutating woops 🙈
           diagram[i] =
-            diagram[i].substring(0, j) + 'x' + diagram[i].substring(j + 1);
+            diagram[i].substring(0, j) + `x` + diagram[i].substring(j + 1);
         }
       }
     }

@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-const input = fs.readFileSync('./day-1/input.txt', 'utf8');
+const input = fs.readFileSync(`./day-1/input.txt`, `utf8`);
 
 /**
  * Day 1:
@@ -13,7 +13,7 @@ let part1Count = 0;
 
 let part2Count = 0;
 
-for (const line of input.trim().split('\n')) {
+for (const line of input.trim().split(`\n`)) {
   const direction = line.charAt(0);
 
   const value = Number(line.slice(1));
@@ -26,11 +26,11 @@ for (const line of input.trim().split('\n')) {
 
   const prevDial = dial;
 
-  if (direction === 'L') {
+  if (direction === `L`) {
     dial = dial - turnBy;
   }
 
-  if (direction === 'R') {
+  if (direction === `R`) {
     dial = dial + turnBy;
   }
 

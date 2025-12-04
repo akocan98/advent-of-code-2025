@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-const input = fs.readFileSync('./day-3/input.txt', 'utf8');
+const input = fs.readFileSync(`./day-3/input.txt`, `utf8`);
 
 /**
  * Day 3:
@@ -11,13 +11,13 @@ let joltageCountPart1 = 0;
 
 let joltageCountPart2 = 0;
 
-for (const line of input.trim().split('\n')) {
+for (const line of input.trim().split(`\n`)) {
   // Part 1:
   let first = 0;
 
   let second = 0;
 
-  for (const [index, char] of line.split('').entries()) {
+  for (const [index, char] of line.split(``).entries()) {
     const value = Number(char);
 
     if (index !== line.length - 1 && value > first) {
@@ -31,14 +31,14 @@ for (const line of input.trim().split('\n')) {
   joltageCountPart1 = joltageCountPart1 + Number(`${first}${second}`);
 
   // Part 2:
-  let maxJoltageLine = '';
+  let maxJoltageLine = ``;
 
   let from = 0;
 
   for (let i = from; i < 12; i++) {
     const highestNumberInAvailableSubstring = line
       .slice(from, line.length - (11 - i))
-      .split('')
+      .split(``)
       .map(Number)
       .reduce((acc, curr) => (curr > acc ? curr : acc), 0);
 

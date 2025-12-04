@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-const input = fs.readFileSync('./day-2/input.txt', 'utf8');
+const input = fs.readFileSync(`./day-2/input.txt`, `utf8`);
 
 /**
  * Day 2:
@@ -22,8 +22,8 @@ const explode = (str: string, n: number) => {
   return chunks;
 };
 
-for (const pair of input.trim().split(',')) {
-  const split = pair.split('-');
+for (const pair of input.trim().split(`,`)) {
+  const split = pair.split(`-`);
 
   const from = Number(split[0]);
 
