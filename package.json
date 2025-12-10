@@ -13,6 +13,7 @@
     "day-6": "tsx day-6/index.ts",
     "day-7": "tsx day-7/index.ts",
     "day-8": "tsx day-8/index.ts",
+    "day-9": "tsx day-9/index.ts"
   },
   "dependencies": {
     "graceful-fs": "^4.2.11"
