@@ -25,5 +25,5 @@ npm run day-2
 ### Day `n`:
 
 ```bash
-npm run day-n
+npm run day-{n}
 ```
